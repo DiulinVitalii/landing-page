@@ -1,3 +1,43 @@
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('opensans-light-webfont.woff2') format('woff2'),
+         url('opensans-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	font-display: swap;
+}
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('opensans-regular-webfont.woff2') format('woff2'),
+         url('opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	font-display: swap;
+}
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('opensans-semibold-webfont.woff2') format('woff2'),
+         url('opensans-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	font-display: swap;
+}
+@font-face {
+    font-family: 'dosislight';
+    src: url('dosis-light-webfont.woff2') format('woff2'),
+         url('dosis-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	font-display: swap;
+}
+@font-face {
+    font-family: 'dosisregular';
+    src: url('dosis-regular-webfont.woff2') format('woff2'),
+         url('dosis-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	font-display: swap;
+}
 *{
 	box-sizing: border-box;
 	margin: 0;
@@ -9,7 +49,10 @@ html {
 body{
 	margin: 0;
 	color: #777;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'open_sanslight', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
 }
 a{
 	color: inherit;
@@ -106,15 +149,28 @@ button {
 }
 .btn {
 	/* общие стили для всех кнопок */
+	font-family: 'open_sansregular', sans-serif;
+	text-transform: uppercase;
+	line-height: 1.733333333em;
+	letter-spacing: .2em;
 }
 .btn-default {
 	/* стили для черной кнопки */
+	font-size: 13px;
+	padding: 7px 15px;
 }
 .btn-large {
 	/* для кнопок серых и больших */
+	padding: 8px 36px;
+	font-size: 14px;
+	color: #111;
+	background-color: #cfcfcf;
 }
 .btn-small {
- 	/* для мал кнопок*/
+	 /* для мал кнопок*/
+	 padding: 4px 9px;
+	 font-size: 11px;
+	 background-color: #777;
 }
 
 .title {
@@ -124,6 +180,7 @@ button {
 	letter-spacing: .5em;
 	font-weight: normal;
 	margin-bottom: 75px;
+	font-family: 'dosisregular', sans-serif;
 }
 .title.title-light {
 	letter-spacing: .3em;
@@ -131,14 +188,101 @@ button {
 .title.title-white {
 	color: #fff;
 }
+.default-text{
+	line-height: 1.733333333rem;
+}
 /* Default component end */
 /* Custom style start */
+/* ===== header start ===== */
+#header{
+	overflow: hidden;
+	position: fixed;
+	z-index: 99999;
+	top: 0;
+	right: 0;
+	left: 0;
+	padding: 27px 0;
+}
+#header .logo{
+	font-size: 0;
+	float: left;
+}
+#header .header-nav{
+	float: right;
+	font-family: 'open_sansregular', sans-serif;
+	text-transform: uppercase;
+	font-size: 0.733333333333rem;
+	color: rgba(255, 255, 255, .75);
+	line-height: 1.4rem;
+}
+#header .header-nav li{
+	float: left;
+}
+#header .header-nav li + li{
+	margin-left: 35px;
+}
+/* ===== header end ===== */
+/* ===== inner start ===== */
+.inner{
+	background: url(../img/inner-bg.jpg) no-repeat center /cover;
+	height: 100vh;
+}
+.inner::before{
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.inner-content{
+	display: inline-block;
+	vertical-align: middle;
+}
+/* .inner .inner-content{
+	padding-top: 280px;
+	padding-bottom: 440px;
+} */
+.inner-content .inner-title h1{
+	font-family: 'dosisregular',sans-serif;
+	font-size: 2rem;
+	letter-spacing: 1.7em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, .9);
+	font-weight: normal;
+	margin-bottom: 100px;
+	text-indent: 1.7em; 
+}
+.inner-content .inner-title h3{
+	font-size: 1.26666667rem;
+	color: rgba(255, 255, 255, .68);
+	font-weight: normal; 
+}
+/* ===== inner end ===== */
+
 /* ===== About studio start ===== */
 .about-studio .row + .row {
 	margin-top: 100px;
 }
+.about-studio blockquote p{
+	font-size: 1.6rem;
+	margin-bottom: 25px;
+	line-height: 2.53333333rem;
+}
+.about-studio blockquote span{
+	font-size: 0.73333rem;
+	text-transform: uppercase;	
+}
+.team-item-info{
+	margin-top: 30px;
+}
 .team-item-info span{
 	display: block;
+	font-family: 'dosisregular',sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.4em;
+}
+.team-item-info .team-item-role{
+	margin-top: 15px;
+	font-size: .8rem;
 }
 /* ===== About studio end ===== */
 /* ===== Lets talk start ===== */
@@ -146,13 +290,40 @@ button {
 	padding-top: 140px;
 	padding-bottom: 140px;
 }
+.lets-talk-wrapper h3.title{
+	font-family: 'dosislight',sans-serif;
+}
 .lets-talk-img {
 	margin-top: -32px;
 }
 .lets-talk .default-text {
 	color: rgba(255, 255, 255, .7);
 }
+.lets-talk-wrapper .btn-large{
+	margin-top: 40px;
+}
 /* ===== Lets talk end ===== */
+/* ===== why choose us start ===== */
+.why-choose-us .row + .row{
+	margin-top: 80px;
+}
+.advantage-icon{
+	font-size: 48px;
+	color: #111;
+}
+.why-choose-us .advantage-title{
+	font-family: 'dosisregular', sans-serif;
+	font-size: 0.933333rem;
+	text-transform: uppercase; 
+	color: #111;
+	letter-spacing: 0.4em;
+	padding-top: 35px;
+	padding-bottom: 30px;	
+}
+.why-choose-us p.default-text{
+	font-size: 0.933333rem;
+}
+/* ===== why choose us end ===== */
 /* Custom style end */
 
 
