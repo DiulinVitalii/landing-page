@@ -1,39 +1,39 @@
 @font-face {
     font-family: 'open_sanslight';
-    src: url('opensans-light-webfont.woff2') format('woff2'),
-         url('opensans-light-webfont.woff') format('woff');
+    src: url('../fonts/opensans-light-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	font-display: swap;
 }
 @font-face {
     font-family: 'open_sansregular';
-    src: url('opensans-regular-webfont.woff2') format('woff2'),
-         url('opensans-regular-webfont.woff') format('woff');
+    src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	font-display: swap;
 }
 @font-face {
     font-family: 'open_sanssemibold';
-    src: url('opensans-semibold-webfont.woff2') format('woff2'),
-         url('opensans-semibold-webfont.woff') format('woff');
+    src: url('../fonts/opensans-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-semibold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	font-display: swap;
 }
 @font-face {
     font-family: 'dosislight';
-    src: url('dosis-light-webfont.woff2') format('woff2'),
-         url('dosis-light-webfont.woff') format('woff');
+    src: url('../fonts/dosis-light-webfont.woff2') format('woff2'),
+         url('../fonts/dosis-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	font-display: swap;
 }
 @font-face {
     font-family: 'dosisregular';
-    src: url('dosis-regular-webfont.woff2') format('woff2'),
-         url('dosis-regular-webfont.woff') format('woff');
+    src: url('../fonts/dosis-regular-webfont.woff2') format('woff2'),
+         url('../fonts/dosis-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	font-display: swap;
@@ -42,6 +42,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	outline: none;
 }
 html {
 	font-size: 15px;
@@ -147,6 +148,9 @@ button {
 .default-section {
 	padding: 135px 0;
 }
+.small-sectiom{
+	padding: 70px 0;
+}
 .btn {
 	/* общие стили для всех кнопок */
 	font-family: 'open_sansregular', sans-serif;
@@ -156,20 +160,20 @@ button {
 }
 .btn-default {
 	/* стили для черной кнопки */
-	font-size: 13px;
+	font-size: 0.86666666rem;
 	padding: 7px 15px;
 }
 .btn-large {
 	/* для кнопок серых и больших */
 	padding: 8px 36px;
-	font-size: 14px;
+	font-size: 0.93333333rem;
 	color: #111;
 	background-color: #cfcfcf;
 }
 .btn-small {
 	 /* для мал кнопок*/
 	 padding: 4px 9px;
-	 font-size: 11px;
+	 font-size: 0.73333333rem;
 	 background-color: #777;
 }
 
@@ -237,10 +241,6 @@ button {
 	display: inline-block;
 	vertical-align: middle;
 }
-/* .inner .inner-content{
-	padding-top: 280px;
-	padding-bottom: 440px;
-} */
 .inner-content .inner-title h1{
 	font-family: 'dosisregular',sans-serif;
 	font-size: 2rem;
@@ -257,17 +257,16 @@ button {
 	font-weight: normal; 
 }
 /* ===== inner end ===== */
-
 /* ===== About studio start ===== */
 .about-studio .row + .row {
 	margin-top: 100px;
 }
-.about-studio blockquote p{
+blockquote p{
 	font-size: 1.6rem;
 	margin-bottom: 25px;
 	line-height: 2.53333333rem;
 }
-.about-studio blockquote span{
+blockquote span{
 	font-size: 0.73333rem;
 	text-transform: uppercase;	
 }
@@ -285,6 +284,40 @@ button {
 	font-size: .8rem;
 }
 /* ===== About studio end ===== */
+/* ===== services start ===== */
+.services h3.title{
+	margin-bottom: 120px;
+}
+.services ul{
+	overflow: hidden;
+	margin-bottom: 70px;
+}
+.services ul li{
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+.services ul li.ui-state-active span{
+	color: rgba(17, 17, 17, .5) !important;
+}
+.services ul li span{
+	display: block;
+}
+.services ul li a span{
+	font-size: 3.2rem;
+	color: #111;	
+}
+.services ul li a span:last-child{
+	color: #111;
+	font-family: 'dosisregular', sans-serif;
+	letter-spacing: 0.4em;
+	text-transform: uppercase;
+	font-size: 0.93333333333rem;
+}
+.services ul li span:last-child{
+	margin-top: 30px;
+}
+/* ===== services end ===== */
 /* ===== Lets talk start ===== */
 .lets-talk-wrapper {
 	padding-top: 140px;
@@ -303,6 +336,59 @@ button {
 	margin-top: 40px;
 }
 /* ===== Lets talk end ===== */
+/* ===== portfolio start ===== */
+.portfolio.default-section{
+	padding-bottom: 0;
+}
+.portfolio p{
+	max-width: 765px;
+	margin: 0 auto 80px auto;
+}
+.portfolio-tab{
+	margin-right: -2px;
+	margin-left: -2px;
+}
+.portfolio-tab div{
+	overflow: hidden;
+}
+.portfolio-tab ul{
+	text-align: center;
+	margin-bottom: 50px;
+}
+.portfolio-tab ul li{
+	display: inline-block;
+	color: #111;
+	font-family: 'dosisregular', sans-serif;
+	text-transform: uppercase;
+	font-size: 0.866666666rem;
+	letter-spacing: 0.4em;
+}
+.portfolio-tab ul li.ui-state-active{
+	color: rgba(17, 17, 17, .5);
+}
+.portfolio-tab ul li + li{
+	margin-left: 68px;
+}
+.portfolio-item{
+	float: left;
+	width: 33.33333333%;
+	padding: 2px;
+}
+.portfolio-item img{
+	width: 100%;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+.portfolio-item img:hover{
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
+}
+/* ===== portfolio end ===== */
+/* ===== small section start ===== */
+.small-sectiom .title{
+	margin-bottom: 25px;
+}
+/* ===== small section end ===== */
 /* ===== why choose us start ===== */
 .why-choose-us .row + .row{
 	margin-top: 80px;
