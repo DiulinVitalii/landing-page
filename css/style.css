@@ -218,6 +218,7 @@ button {
 	font-size: 0.733333333333rem;
 	color: rgba(255, 255, 255, .75);
 	line-height: 1.4rem;
+	letter-spacing: 0.3em;
 }
 #header .header-nav li{
 	float: left;
@@ -251,7 +252,7 @@ button {
 	margin-bottom: 100px;
 	text-indent: 1.7em; 
 }
-.inner-content .inner-title h3{
+.inner-content span{
 	font-size: 1.26666667rem;
 	color: rgba(255, 255, 255, .68);
 	font-weight: normal; 
@@ -298,17 +299,17 @@ blockquote span{
 	text-align: center;
 }
 .services ul li.ui-state-active span{
-	color: rgba(17, 17, 17, .5) !important;
+	color: #111 !important;
 }
 .services ul li span{
 	display: block;
 }
 .services ul li a span{
 	font-size: 3.2rem;
-	color: #111;	
+	color: rgba(17, 17, 17, .5);	
 }
 .services ul li a span:last-child{
-	color: #111;
+	color: rgba(17, 17, 17, .5);	
 	font-family: 'dosisregular', sans-serif;
 	letter-spacing: 0.4em;
 	text-transform: uppercase;
@@ -344,10 +345,6 @@ blockquote span{
 	max-width: 765px;
 	margin: 0 auto 80px auto;
 }
-.portfolio-tab{
-	margin-right: -2px;
-	margin-left: -2px;
-}
 .portfolio-tab div{
 	overflow: hidden;
 }
@@ -357,14 +354,14 @@ blockquote span{
 }
 .portfolio-tab ul li{
 	display: inline-block;
-	color: #111;
+	color: rgba(17, 17, 17, .5);
 	font-family: 'dosisregular', sans-serif;
 	text-transform: uppercase;
 	font-size: 0.866666666rem;
 	letter-spacing: 0.4em;
 }
 .portfolio-tab ul li.ui-state-active{
-	color: rgba(17, 17, 17, .5);
+	color: #111;
 }
 .portfolio-tab ul li + li{
 	margin-left: 68px;
@@ -410,6 +407,51 @@ blockquote span{
 	font-size: 0.933333rem;
 }
 /* ===== why choose us end ===== */
+/* ===== Reviews start ===== */
+.reviews-carousel {
+	padding: 140px 0;
+}
+.slick-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1;
+}
+.slick-arrow.slick-prev {
+	left: 0;
+}
+.slick-arrow.slick-next {
+	right: 0;
+}
+.slick-dots {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	line-height: 0;
+}
+.slick-dots li {
+	display: inline-block;
+	vertical-align: bottom;
+}
+.slick-dots li + li {
+	margin-left: 5px;
+}
+.slick-dots li button {
+	color: transparent;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	border: 1px solid #ccc;
+	background-color: #ccc;
+}
+.slick-dots li.slick-active button {
+	background-color: transparent;
+	width: 9px;
+	height: 9px;
+}
+
+/* ===== Reviews end ===== */
 /* Custom style end */
 
 
