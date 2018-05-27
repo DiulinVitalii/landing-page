@@ -73,6 +73,9 @@ button {
 	border: none;
 	cursor: pointer;
 }
+textarea{
+	resize: vertical;
+}
 /* Grid layout start */
 .container {
 	max-width: 1200px;
@@ -143,6 +146,14 @@ button {
 .bg-black {
 	background-color: #111;
 }
+.bg-grey {
+	background-color: #f8f8f8;
+}
+.mx-auto{
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
 /* Default classes end */
 /* Default component start */
 .default-section {
@@ -161,7 +172,9 @@ button {
 .btn-default {
 	/* стили для черной кнопки */
 	font-size: 0.86666666rem;
-	padding: 7px 15px;
+	padding: 9px 15px;
+	color: #cfcfcf;
+	background-color: #111;
 }
 .btn-large {
 	/* для кнопок серых и больших */
@@ -174,7 +187,8 @@ button {
 	 /* для мал кнопок*/
 	 padding: 4px 9px;
 	 font-size: 0.73333333rem;
-	 background-color: #777;
+	 background-color: #e5e5e5;
+	 color: #777;
 }
 
 .title {
@@ -194,6 +208,57 @@ button {
 }
 .default-text{
 	line-height: 1.733333333rem;
+}
+.rhomb-icon{
+	display: inline-block;
+	width: 23px;
+	text-align: center;
+	line-height: 23px;
+	border-radius: 2px;
+	font-size: 0.8rem;
+	transform: rotate(45deg);
+}
+.rhomb-icon > *{
+	transform: rotate(-45deg);
+}
+.rhomb-icon > .fa-phone{
+	transform: rotate(45deg);
+}
+.rhomb-icon.black-icon{
+	color: #fff;
+	background-color: #111;
+}
+.rhomb-icon.white-icon{
+	color: #111;
+	background-color: #fff;
+}
+.rhomb-icon.transporent-icon{
+	color: #111;
+	background-color: transparent;
+	border: 1px solid #111;
+}
+.rhomb-icon.transporent-icon:hover{
+	color: #fff;
+	background-color: #111;
+}
+.form-control{
+	width: 100%;
+	border: 1px solid #e5e5e5;
+	border-radius: 2px;
+	height: 40px;
+	font-size: .8rem;
+	text-transform: uppercase;
+	font-family: 'open_sansregular', sans-serif;
+	letter-spacing: 0.2em;
+	font-size: 0.8rem;
+	line-height: 1.733333rem;
+	color: #777;
+	padding: 0 13px;
+	background: #fff;
+}
+textarea.form-control{
+	min-height: 90px;
+	padding-top: 10px;
 }
 /* Default component end */
 /* Custom style start */
@@ -228,21 +293,21 @@ button {
 }
 /* ===== header end ===== */
 /* ===== inner start ===== */
-.inner{
+#main .inner{
 	background: url(../img/inner-bg.jpg) no-repeat center /cover;
 	height: 100vh;
 }
-.inner::before{
+#main .inner::before{
 	content: '';
 	display: inline-block;
 	height: 100%;
 	vertical-align: middle;
 }
-.inner-content{
+#main .inner-content{
 	display: inline-block;
 	vertical-align: middle;
 }
-.inner-content .inner-title h1{
+#main .inner-content .inner-title h1{
 	font-family: 'dosisregular',sans-serif;
 	font-size: 2rem;
 	letter-spacing: 1.7em;
@@ -252,7 +317,7 @@ button {
 	margin-bottom: 100px;
 	text-indent: 1.7em; 
 }
-.inner-content span{
+#main .inner-content span{
 	font-size: 1.26666667rem;
 	color: rgba(255, 255, 255, .68);
 	font-weight: normal; 
@@ -450,8 +515,213 @@ blockquote span{
 	width: 9px;
 	height: 9px;
 }
-
 /* ===== Reviews end ===== */
+/* ===== Latest news start ===== */
+.latest-news .container .title-wrapper::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.latest-news .container .title-wrapper .title{
+	float: left;	
+}
+.latest-news .container .title-wrapper span{
+	float: right;
+	font-family: 'dosisregular';
+	font-size: 0.7333333rem;
+	color: #999;
+	letter-spacing: 0.4em;
+	text-transform: uppercase;
+	line-height: 1.53333rem;	
+}
+.latest-news img{
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	margin-bottom: 30px;
+}
+.latest-news img:hover{
+	filter: grayscale(0);
+}
+.latest-news span{
+	display: block;
+	font-family: 'dosisregular';
+	text-transform: uppercase;
+}
+.latest-news .latest-news-item-title{
+	letter-spacing: .2em;
+	margin-bottom: 15px;
+}
+.latest-news .latest-news-item-author{
+	letter-spacing: .4em;
+	color: #999;
+	margin-bottom: 25px;
+	font-size: 0.733333rem;
+}
+.latest-news p{
+	margin-bottom: 15px;
+}
+/* ===== Latest news end ===== */
+/* ===== Stay informed start ===== */
+.stay-informed{
+	padding: 80px 0;
+}
+.stay-informed .title{
+	margin-bottom: 15px;
+}
+.stay-informed .form{
+	max-width: 465px;
+	margin: auto;
+}
+.stay-informed .form .form-control{
+	max-width: 290px;
+}
+.stay-informed .form span{
+    font-family: 'open_sansregular', sans-serif;
+	font-size: 0.733333rem;
+	line-height: 1.7333333rem;
+	color: #aaa;
+	margin-top: 11px;
+	display: block;
+}
+/* ===== Stay informed end ===== */
+/* ===== Contacts start ===== */
+.contact-item .rhomb-icon{
+	vertical-align: middle;
+}
+.contact-item-content{
+	display: inline-block;
+	margin-left: 15px;
+	vertical-align: middle;
+}
+.contact-item-content span{
+	display: block;
+}
+.contact-item-content .contact-title{
+	font-family: 'dosisregular', sans-serif;
+	font-size: 0.8rem;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+}
+.contact-item-content .contact-data{
+	line-height: 1.6rem;
+	color: #444; 
+}
+.form-row{
+	margin: 0 -5px;
+}
+.form-col{
+	width: 50%;
+	float: left;
+	padding: 0 5px;
+}
+.contact-form{
+	margin-top: 80px;
+}
+.contact-form .form-control + .form-control{
+	margin-top: 10px;
+}
+.form-info, .form-submit{
+	margin-top: 20px;
+}
+.form-info{
+	float: left;
+}
+.form-info span{
+	font-family: 'open_sansregular', sans-serif;
+	font-size: 0.73333333rem;
+	line-height: 40px;
+	color: #aaa;
+}
+.form-submit{
+	float: right;
+}
+/* ===== Contacts end ===== */
+/* ===== Map start ===== */
+.map-container {
+	position: relative;
+}
+#map {
+	width: 100%;
+	height: 410px;
+}
+.on-map-block {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .9);
+}
+.map-container:hover .on-map-block {
+	opacity: 0;
+}
+.on-map-block::before{
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+.on-map-block-inscription{
+	display: inline-block;
+	vertical-align: middle;
+}
+.on-map-block span{
+	font-family: 'dosisregular', sans-serif;
+	font-size: 1.06666rem;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, .75);
+	display: block;
+	margin-top: 28px;
+}
+/* ===== Map end ===== */
+/* ===== Footer start ===== */
+#footer{
+	padding-top: 140px;
+	padding-bottom: 60px;
+}
+#footer .inner-content{
+	display: inline-block;
+}
+#footer .inner-content img{
+	margin-bottom: 24px;
+}
+#footer ul::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+#footer ul li{
+	float: left;
+}
+#footer ul li + li{
+	margin-left: 25px;
+}
+#footer ul li a{
+	font-size: 0.93333rem;
+}
+#footer .inner-content span{
+	font-family: 'open_sansregular', sans-serif;
+	line-height: 1.6rem;
+	display: block;
+}
+.copyright{
+	margin-top: 110px;
+}
+.copyright span:first-child{	
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;	
+	color: #111;
+	margin-bottom: 10px;	
+}
+.copyright span:last-child{
+	font-size: 0.73333rem;
+	color: #999;
+}
+/* ===== Footer end ===== */
+
+
 /* Custom style end */
 
 
