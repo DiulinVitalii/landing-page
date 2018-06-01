@@ -15,5 +15,6 @@ $( function(){
     appendTo: '#header .container-fluid',
     label: ''
   });
-
+  //wow init
+  new WOW({mobile:false}).init();
   });

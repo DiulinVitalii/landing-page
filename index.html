@@ -12,22 +12,24 @@
     <link rel="stylesheet" href="css/et-line.css">
     <!-- SlickNav styles -->
     <link rel="stylesheet" href="css/slicknav.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="css/animate.css">
 		<!-- Custom style -->
 		<link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div id="header">
       <div class="container-fluid">
-        <div class="logo">
+        <div class="logo animate-scale">
           <a href="#"><img src="img/header-logo-img.png" alt="logo"></a> 
         </div>
         <!-- /.logo -->
         <ul class="header-nav">
-          <li> <a href="#">home</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">services</a></li>
-          <li><a href="#">works</a></li>
-          <li><a href="#">contact</a></li>
+          <li> <a href="#" data-scroll=".inner">home</a></li>
+          <li><a href="#" data-scroll=".about-studio">about</a></li>
+          <li><a href="#" data-scroll=".services">services</a></li>
+          <li><a href="#" data-scroll=".portfolio">works</a></li>
+          <li><a href="#" data-scroll=".contacts">contact</a></li>
         </ul>
         <!-- /.header-nav -->
       </div>
@@ -35,7 +37,7 @@
     </div>
     <!-- /#header -->
     <div id="main">
-      <div class="inner text-center">
+      <div class="inner text-center animate-opacity">
         <div class="inner-content">
           <div class="inner-title">
             <h1>Thomas Rhythm</h1>   
@@ -44,12 +46,13 @@
           <span>Extraordinary art director &#38; creative minimalism lover</span>
         </div>
         <!-- /.inner-content -->
+        <div class="rhomb-icon white-icon" data-scroll=".about-studio" style="cursor: pointer;"><i class="fas fa-angle-down"></i></div>
       </div>
       <!-- /.inner -->
       <div class="default-section about-studio">
         <div class="container">
-          <h3 class="title">About studio</h3>
-          <div class="row">
+          <h3 class="title wow bounceInLeft" data-wow-offset="10">About studio</h3>
+          <div class="row wow bounceInRight" data-wow-offset="10">
             <div class="col col-4 col-md-12">
               <blockquote>
                 <p>Design is not making beauty, beauty emerges from selection, affinities, integration, love.
@@ -69,10 +72,32 @@
           </div>
           <!-- /.row -->
           <div class="row">
-            <div class="col col-4 col-sd-12">
+            <div class="col col-4 col-sd-12 wow bounceInLeft" data-wow-offset="10">
               <div class="team-item">
                 <div class="team-item-photo">
-                  <img src="img/team-img-1.jpg" alt="">
+                  <div class="container-for-flip team-item-front">
+                    <img src="img/team-img-1.jpg" alt="">
+                  </div>
+                  <div class="container-for-flip team-item-skills">
+                    <span>skills</span>
+                    <p>Curabitur iaculis accumsan augue, nec finibus mauris pretium eu. Duis placerat ex gravida nibh tristique porta.</p>
+                    <span class="skill-name">Branding</span>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 80%"></div>
+                    </div>
+                    <span class="skill-name">Design</span>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 85%"></div>
+                    </div>
+                    <span class="skill-name">Development</span>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 83%"></div>
+                    </div>
+                    <span class="skill-name">Photography</span>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 75%"></div>
+                    </div>
+                  </div>
                 </div>
                 <!-- /.team-item-photo -->
                 <div class="team-item-info text-center">
@@ -84,10 +109,32 @@
               <!-- /.team-item -->
             </div>
             <!-- /.col col-4 -->
-            <div class="col col-4 col-sd-12">
+            <div class="col col-4 col-sd-12 wow bounceInUp" data-wow-duration="2s" data-wow-offset="10">
               <div class="team-item">
                 <div class="team-item-photo">
-                  <img src="img/team-img-2.jpg" alt="">
+                  <div class="container-for-flip team-item-front">
+                    <img src="img/team-img-2.jpg" alt="">
+                  </div>
+                  <div class="container-for-flip team-item-skills">
+                    <span>skills</span>
+                    <p>Curabitur iaculis accumsan augue, nec finibus mauris pretium eu. Duis placerat ex gravida nibh tristique porta.</p>
+                    <span class="skill-name">Branding</span>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 80%"></div>
+                    </div>
+                    <span class="skill-name">Design</span>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 85%"></div>
+                    </div>
+                    <span class="skill-name">Development</span>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 83%"></div>
+                    </div>
+                    <span class="skill-name">Photography</span>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 75%"></div>
+                    </div>
+                  </div>
                 </div>
                 <!-- /.team-item-photo -->
                 <div class="team-item-info text-center">
@@ -99,10 +146,32 @@
               <!-- /.team-item -->
             </div>
             <!-- /.col col-4 -->
-            <div class="col col-4 col-sd-12">
+            <div class="col col-4 col-sd-12 wow bounceInRight" data-wow-offset="10">
               <div class="team-item">
                 <div class="team-item-photo">
-                  <img src="img/team-img-3.jpg" alt="">
+                  <div class="container-for-flip team-item-front">
+                    <img src="img/team-img-3.jpg" alt="">
+                  </div>
+                  <div class="container-for-flip team-item-skills">
+                    <span>skills</span>
+                    <p>Curabitur iaculis accumsan augue, nec finibus mauris pretium eu. Duis placerat ex gravida nibh tristique porta.</p>
+                    <span class="skill-name">Branding</span>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 80%"></div>
+                    </div>
+                    <span class="skill-name">Design</span>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 85%"></div>
+                    </div>
+                    <span class="skill-name">Development</span>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 83%"></div>
+                    </div>
+                    <span class="skill-name">Photography</span>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 75%"></div>
+                    </div>
+                  </div>
                 </div>
                 <!-- /.team-item-photo -->
                 <div class="team-item-info text-center">
@@ -124,31 +193,31 @@
           <h3 class="title text-center">Services</h3>
           <div class="services-tab">
             <ul>
-              <li>
+              <li class="wow slideInDown" data-wow-offset="10">
                 <a href="#branding">
                   <span class="icon-strategy"></span>
                   <span>branding</span>                  
                 </a>
               </li>
-              <li>
+              <li class="wow slideInUp" data-wow-offset="10">
                 <a href="#web-design">
                   <span class="icon-desktop"></span>
                   <span>web design</span>
                 </a>
               </li>
-              <li>
+              <li class="wow slideInDown" data-wow-offset="10">
                 <a href="#graphic-design">
                   <span class="icon-tools"></span>
                   <span>graphic design</span>
                 </a>
               </li>
-              <li>
+              <li class="wow slideInUp" data-wow-offset="10">
                 <a href="#development">
                   <span class="icon-gears"></span>
                   <span>development</span>
                 </a>
               </li>
-              <li>
+              <li class="wow slideInDown" data-wow-offset="10">
                 <a href="#photography">
                   <span class="icon-camera"></span>
                   <span>photography</span>
@@ -288,7 +357,7 @@
               <!-- /.lets-talk-wrapper -->
             </div>
             <!-- /.col col-6 -->
-            <div class="col col-6 text-right d-none-md">
+            <div class="col col-6 text-right d-none-md wow fadeInRight" data-wow-offset="10">
               <img src="img/lets-talk-img.png" class="lets-talk-img" alt="">
             </div>
             <!-- /.col col-6 -->
@@ -662,6 +731,9 @@
      <script src="js/google-maps.js"></script>
      <!-- slickNav -->
      <script src="js/jquery.slicknav.min.js"></script>
+     <!-- Header on scroll -->
+     <script src="js/header-on-scroll.js"></script>
+     <script src="js/wow.min.js"></script>
      <!-- Init plugins -->
     <script src="js/init.js"></script>
   </body>

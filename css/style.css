@@ -438,6 +438,21 @@ textarea.form-control{
 /* Default component end */
 /* Custom style start */
 /* ===== header start ===== */
+.animate-scale{
+	transform: scale(0);
+	animation: scale .5s ease-in 1s forwards;
+}
+@keyframes scale{
+	0%{
+		transform: scale(0);
+	}
+	50%{
+		transform: scale(1.1);		
+	}
+	100%{
+		transform: scale(1);				
+	}
+}
 #header{
 	position: fixed;
 	z-index: 99999;
@@ -471,7 +486,7 @@ textarea.form-control{
 	font-family: 'open_sansregular', sans-serif;
 	text-transform: uppercase;
 	font-size: 0.733333333333rem;
-	color: rgba(37, 11, 11, 0.75);
+	color: rgba(255, 255, 255, 0.75);
 	line-height: 1.4rem;
 	letter-spacing: 0.3em;
 }
@@ -491,10 +506,23 @@ textarea.form-control{
 }
 /* ===== header end ===== */
 /* ===== inner start ===== */
+.animate-opacity{
+	opacity: 0;
+	animation: opacity .5s ease-in .5s forwards;
+}
+@keyframes opacity{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
 #main .inner{
 	background: url(../img/inner-bg.jpg) no-repeat center /cover;
 	height: 100vh;
 	vertical-align: middle;
+	position: relative;
 }
 #main .inner::before{
 	content: '';
@@ -521,6 +549,12 @@ textarea.form-control{
 	color: rgba(255, 255, 255, .68);
 	font-weight: normal; 
 }
+#main .inner .rhomb-icon{
+	position: absolute;
+	bottom: 35px;
+	left: 50%;
+	margin-left: -11px;
+}
 @media (max-width: 991px){
 	#main .inner{
 		height: auto;
@@ -536,6 +570,69 @@ textarea.form-control{
 /* ===== About studio start ===== */
 .about-studio .row + .row {
 	margin-top: 100px;
+}
+.team-item-photo{
+	line-height: 0;
+	height: 450px;
+	position: relative;
+	perspective: 2000px;
+}
+.team-item-skills{
+	background-color: #000;
+	transform: rotateY(180deg);
+	padding: 40px;	
+}
+.container-for-flip{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	backface-visibility: hidden;
+	transition: all .8s ease;
+}
+.team-item-photo:hover .team-item-front{
+	transform: rotateY(180deg);
+}
+.team-item-photo:hover .team-item-skills{
+	transform: rotateY(360deg);
+}
+.team-item-skills span:first-child{
+	font-family: 'dosisregular';
+	font-size: 1.2rem;
+	line-height: 2.53333rem;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	color: #fff;
+}
+.team-item-skills p{
+	font-family: 'open_sansregular';
+	font-size: 0.8666666rem;
+	line-height: 1.4rem;
+	color: rgba(255, 255, 255, .5);
+}
+.team-item-skills .skill-name{
+	font-family: 'open_sansregular';
+	font-size: 0.733333rem;
+	line-height: 2.53333rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, .9);
+	display: block;
+	
+}
+.progress-bar{
+	border: 1px solid #cdcdcd;
+	height: 12px;
+	width: 100%;
+	position: relative;
+}
+.progress-bar .progress{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background-color: #cdcdcd;
 }
 blockquote p{
 	font-size: 1.6rem;
@@ -739,14 +836,19 @@ blockquote span{
 }
 /* ===== why choose us end ===== */
 /* ===== Reviews start ===== */
+.reviews{
+	overflow: hidden;
+}
 .reviews-carousel {
 	padding: 140px 0;
 }
 .slick-arrow {
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 0;
+	height: 100%;
+	width: 90px;
 	z-index: 1;
+	cursor: pointer;
 }
 .slick-arrow.slick-prev {
 	left: 0;
@@ -754,6 +856,34 @@ blockquote span{
 .slick-arrow.slick-next {
 	right: 0;
 }
+.slick-arrow .carousel-button{
+	width: 63px;
+	height: 63px;
+	background-color: #fff;
+	position: absolute;
+	transform: rotate(-45deg);
+	top: 50%;
+	margin-top: -31px;
+	margin-left: -32px;
+}
+.slick-arrow.slick-next .carousel-button{
+	margin-right: -32px;
+	right: 0;
+}
+.slick-arrow .carousel-button .fa{
+	position: absolute;
+	transform: rotate(45deg);
+	font-size: 10px;
+}
+.slick-arrow.slick-prev .carousel-button .fa{
+	bottom: 14px;
+	right: 17px;
+}
+.slick-arrow.slick-next .carousel-button .fa{
+	top: 17px;
+	left: 14px;
+}
+
 .slick-dots {
 	position: absolute;
 	bottom: 30px;
