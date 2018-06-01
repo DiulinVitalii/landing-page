@@ -435,6 +435,17 @@ textarea.form-control{
 	min-height: 90px;
 	padding-top: 10px;
 }
+.up-arrow {
+	content: ''; 
+    position: fixed;
+	right: 30px;
+	bottom: 30px;
+	border: 20px solid transparent;
+	border-bottom: 20px solid #000;
+	opacity: 0.2;
+	cursor: pointer;
+   }
+
 /* Default component end */
 /* Custom style start */
 /* ===== header start ===== */
