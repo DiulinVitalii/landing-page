@@ -32,13 +32,20 @@ function onScroll(e) {
 $(window).on('scroll', onScroll); // вешаем событие на скролл в окне
 
 // Scroll to element
-const scrollBtn = $('[data-scroll]'); // ищем все элементы у которого есмть атрибут data-scroll
+function scrollTo(){
+    // Scroll to element
+    const scrollBtn = $('[data-scroll]');
 
-function onClick(e) {
-    e.preventDefault(); // отменить стандартное действие
-    const target = $(this).attr('data-scroll'); // получаем значение атрибута data-scroll 
-    const dist = $(target).offset().top; // меряем растояние до блока
-    $('html, body').animate({ scrollTop: dist }, 1000, 'swing'); // анимируем скролл до нужного блока 
+    function onScroll(e) {
+        e.preventDefault();
+
+        // Close slick nav
+        $('.header-nav').slicknav('close');
+        let target = $(this).attr('data-scroll');
+        let dist = $(target).offset().top;
+        $('html, body').animate({scrollTop: dist}, 1000, 'swing');
+    }
+
+    scrollBtn.on('click', onScroll);
 }
-
-scrollBtn.on('click', onClick); // отслеживаем событие клик на все элементы с атрр data-scroll
+$(window).on('load', scrollTo);
